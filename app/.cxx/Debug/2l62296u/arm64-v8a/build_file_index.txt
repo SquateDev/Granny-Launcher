@@ -1,0 +1,1 @@
+C:\Users\sosan\AndroidStudioProjects\Granny-Launcher-main\app\src\main\cpp\CMakeLists.txt

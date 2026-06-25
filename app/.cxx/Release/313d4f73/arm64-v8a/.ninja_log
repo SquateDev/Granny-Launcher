@@ -1,0 +1,7 @@
+# ninja log v5
+266	4803	8009826015491234	CMakeFiles/akironlauncher.dir/main.cpp.o	ab69e533f567de05
+351	4937	8009826016220630	CMakeFiles/akironlauncher.dir/KittyMemory/MemoryBackup.cpp.o	af80e0eb2294e54b
+1	4948	8009826017073923	CMakeFiles/akironlauncher.dir/KittyMemory/KittyMemory.cpp.o	f16b62cb4a1b2cd6
+308	4954	8009826017095815	CMakeFiles/akironlauncher.dir/KittyMemory/MemoryPatch.cpp.o	8008cad2901d6a9a
+326	5216	8009826019900505	CMakeFiles/akironlauncher.dir/KittyMemory/KittyUtils.cpp.o	2ee07ebff80873b4
+5218	6471	8009826032400443	C:/Users/sosan/AndroidStudioProjects/Granny-Launcher-main/app/build/intermediates/cxx/Release/313d4f73/obj/arm64-v8a/libakironlauncher.so	5afd871aeddc04de

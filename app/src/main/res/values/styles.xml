@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="BaseUnityTheme" parent="@android:style/Theme.Material.Light.NoActionBar.Fullscreen" />
+    <style name="Bm.Animation.BottomSheetDialog" parent="@android:style/Animation">
+        <item name="android:windowEnterAnimation">@anim/bm_bottom_sheet_slide_in</item>
+        <item name="android:windowExitAnimation">@anim/bm_bottom_sheet_slide_out</item>
+    </style>
+    <style name="Bm.BottomSheetDialog" parent="">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowAnimationStyle">@style/Bm.Animation.BottomSheetDialog</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:windowCloseOnTouchOutside">true</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="android:windowElevation">16.0dip</item>
+    </style>
+    <style name="ExoMediaButton">
+        <item name="android:background">?android:selectableItemBackground</item>
+        <item name="android:layout_width">@dimen/exo_media_button_width</item>
+        <item name="android:layout_height">@dimen/exo_media_button_height</item>
+    </style>
+    <style name="ExoMediaButton.FastForward" parent="@style/ExoMediaButton">
+        <item name="android:src">@drawable/exo_legacy_controls_fastforward</item>
+        <item name="android:contentDescription">@string/exo_controls_fastforward_description</item>
+    </style>
+    <style name="ExoMediaButton.Next" parent="@style/ExoMediaButton">
+        <item name="android:src">@drawable/exo_legacy_controls_next</item>
+        <item name="android:contentDescription">@string/exo_controls_next_description</item>
+    </style>
+    <style name="ExoMediaButton.Pause" parent="@style/ExoMediaButton">
+        <item name="android:src">@drawable/exo_legacy_controls_pause</item>
+        <item name="android:contentDescription">@string/exo_controls_pause_description</item>
+    </style>
+    <style name="ExoMediaButton.Play" parent="@style/ExoMediaButton">
+        <item name="android:src">@drawable/exo_legacy_controls_play</item>
+        <item name="android:contentDescription">@string/exo_controls_play_description</item>
+    </style>
+    <style name="ExoMediaButton.Previous" parent="@style/ExoMediaButton">
+        <item name="android:src">@drawable/exo_legacy_controls_previous</item>
+        <item name="android:contentDescription">@string/exo_controls_previous_description</item>
+    </style>
+    <style name="ExoMediaButton.Rewind" parent="@style/ExoMediaButton">
+        <item name="android:src">@drawable/exo_legacy_controls_rewind</item>
+        <item name="android:contentDescription">@string/exo_controls_rewind_description</item>
+    </style>
+    <style name="ExoMediaButton.VR" parent="@style/ExoMediaButton">
+        <item name="android:src">@drawable/exo_legacy_controls_vr</item>
+        <item name="android:contentDescription">@string/exo_controls_vr_description</item>
+    </style>
+    <style name="ExoStyledControls" />
+    <style name="ExoStyledControls.Button" parent="@style/ExoStyledControls">
+        <item name="android:background">?android:selectableItemBackground</item>
+        <item name="android:layout_marginLeft">@dimen/exo_icon_horizontal_margin</item>
+        <item name="android:layout_marginRight">@dimen/exo_icon_horizontal_margin</item>
+        <item name="android:scaleType">fitXY</item>
+    </style>
+    <style name="ExoStyledControls.Button.Bottom" parent="@style/ExoStyledControls.Button">
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:paddingLeft">@dimen/exo_small_icon_padding_horizontal</item>
+        <item name="android:paddingTop">@dimen/exo_small_icon_padding_vertical</item>
+        <item name="android:paddingRight">@dimen/exo_small_icon_padding_horizontal</item>
+        <item name="android:paddingBottom">@dimen/exo_small_icon_padding_vertical</item>
+        <item name="android:layout_width">@dimen/exo_small_icon_width</item>
+        <item name="android:layout_height">@dimen/exo_small_icon_height</item>
+        <item name="android:layout_marginLeft">@dimen/exo_small_icon_horizontal_margin</item>
+        <item name="android:layout_marginRight">@dimen/exo_small_icon_horizontal_margin</item>
+    </style>
+    <style name="ExoStyledControls.Button.Bottom.AudioTrack" parent="@style/ExoStyledControls.Button.Bottom">
+        <item name="android:src">@drawable/exo_styled_controls_audiotrack</item>
+        <item name="android:contentDescription">@string/exo_track_selection_title_audio</item>
+    </style>
+    <style name="ExoStyledControls.Button.Bottom.CC" parent="@style/ExoStyledControls.Button.Bottom">
+        <item name="android:src">@drawable/exo_styled_controls_subtitle_off</item>
+        <item name="android:contentDescription">@string/exo_controls_cc_disabled_description</item>
+    </style>
+    <style name="ExoStyledControls.Button.Bottom.FullScreen" parent="@style/ExoStyledControls.Button.Bottom">
+        <item name="android:src">@drawable/exo_styled_controls_fullscreen_enter</item>
+        <item name="android:contentDescription">@string/exo_controls_fullscreen_enter_description</item>
+    </style>
+    <style name="ExoStyledControls.Button.Bottom.OverflowHide" parent="@style/ExoStyledControls.Button.Bottom">
+        <item name="android:src">@drawable/exo_styled_controls_overflow_hide</item>
+        <item name="android:contentDescription">@string/exo_controls_overflow_hide_description</item>
+    </style>
+    <style name="ExoStyledControls.Button.Bottom.OverflowShow" parent="@style/ExoStyledControls.Button.Bottom">
+        <item name="android:src">@drawable/exo_styled_controls_overflow_show</item>
+        <item name="android:contentDescription">@string/exo_controls_overflow_show_description</item>
+    </style>
+    <style name="ExoStyledControls.Button.Bottom.PlaybackSpeed" parent="@style/ExoStyledControls.Button.Bottom">
+        <item name="android:src">@drawable/exo_styled_controls_speed</item>
+        <item name="android:contentDescription">@string/exo_controls_playback_speed</item>
+    </style>
+    <style name="ExoStyledControls.Button.Bottom.RepeatToggle" parent="@style/ExoStyledControls.Button.Bottom">
+        <item name="android:src">@drawable/exo_styled_controls_repeat_off</item>
+        <item name="android:contentDescription">@string/exo_controls_repeat_off_description</item>
+    </style>
+    <style name="ExoStyledControls.Button.Bottom.Settings" parent="@style/ExoStyledControls.Button.Bottom">
+        <item name="android:src">@drawable/exo_styled_controls_settings</item>
+        <item name="android:contentDescription">@string/exo_controls_settings_description</item>
+    </style>
+    <style name="ExoStyledControls.Button.Bottom.Shuffle" parent="@style/ExoStyledControls.Button.Bottom">
+        <item name="android:src">@drawable/exo_styled_controls_shuffle_off</item>
+        <item name="android:contentDescription">@string/exo_controls_shuffle_off_description</item>
+    </style>
+    <style name="ExoStyledControls.Button.Bottom.VR" parent="@style/ExoStyledControls.Button.Bottom">
+        <item name="android:src">@drawable/exo_styled_controls_vr</item>
+        <item name="android:contentDescription">@string/exo_controls_vr_description</item>
+    </style>
+    <style name="ExoStyledControls.Button.Center" parent="@style/ExoStyledControls.Button">
+        <item name="android:background">?android:selectableItemBackgroundBorderless</item>
+        <item name="android:layout_width">@dimen/exo_icon_size</item>
+        <item name="android:layout_height">@dimen/exo_icon_size</item>
+    </style>
+    <style name="ExoStyledControls.Button.Center.FfwdWithAmount" parent="@style/ExoStyledControls.Button.Center">
+        <item name="android:textSize">@dimen/exo_icon_text_size</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/exo_white</item>
+        <item name="android:gravity">bottom|center</item>
+        <item name="android:paddingLeft">0.0dip</item>
+        <item name="android:paddingRight">0.0dip</item>
+        <item name="android:paddingBottom">@dimen/exo_icon_padding_bottom</item>
+        <item name="android:foreground">@drawable/exo_styled_controls_fastforward</item>
+        <item name="android:insetBottom">0.0dip</item>
+        <item name="backgroundTint">@color/exo_white</item>
+    </style>
+    <style name="ExoStyledControls.Button.Center.Next" parent="@style/ExoStyledControls.Button.Center">
+        <item name="android:padding">@dimen/exo_icon_padding</item>
+        <item name="android:src">@drawable/exo_styled_controls_next</item>
+        <item name="android:contentDescription">@string/exo_controls_next_description</item>
+    </style>
+    <style name="ExoStyledControls.Button.Center.PlayPause" parent="@style/ExoStyledControls.Button.Center">
+        <item name="android:padding">@dimen/exo_icon_padding</item>
+        <item name="android:src">@drawable/exo_styled_controls_play</item>
+        <item name="android:contentDescription">@string/exo_controls_play_description</item>
+    </style>
+    <style name="ExoStyledControls.Button.Center.Previous" parent="@style/ExoStyledControls.Button.Center">
+        <item name="android:padding">@dimen/exo_icon_padding</item>
+        <item name="android:src">@drawable/exo_styled_controls_previous</item>
+        <item name="android:contentDescription">@string/exo_controls_previous_description</item>
+    </style>
+    <style name="ExoStyledControls.Button.Center.RewWithAmount" parent="@style/ExoStyledControls.Button.Center">
+        <item name="android:textSize">@dimen/exo_icon_text_size</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/exo_white</item>
+        <item name="android:gravity">bottom|center</item>
+        <item name="android:paddingLeft">0.0dip</item>
+        <item name="android:paddingRight">0.0dip</item>
+        <item name="android:paddingBottom">@dimen/exo_icon_padding_bottom</item>
+        <item name="android:foreground">@drawable/exo_styled_controls_rewind</item>
+        <item name="android:insetBottom">0.0dip</item>
+        <item name="backgroundTint">@color/exo_white</item>
+    </style>
+    <style name="ExoStyledControls.TimeBar" parent="@style/ExoStyledControls">
+        <item name="android:layout_height">@dimen/exo_styled_progress_layout_height</item>
+        <item name="bar_gravity">bottom</item>
+        <item name="bar_height">@dimen/exo_styled_progress_bar_height</item>
+        <item name="scrubber_dragged_size">@dimen/exo_styled_progress_dragged_thumb_size</item>
+        <item name="scrubber_enabled_size">@dimen/exo_styled_progress_enabled_thumb_size</item>
+        <item name="touch_target_height">@dimen/exo_styled_progress_touch_target_height</item>
+    </style>
+    <style name="ExoStyledControls.TimeText" parent="@style/ExoStyledControls">
+        <item name="android:textSize">14.0sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:paddingLeft">4.0dip</item>
+        <item name="android:paddingRight">4.0dip</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+    <style name="ExoStyledControls.TimeText.Duration" parent="@style/ExoStyledControls.TimeText">
+        <item name="android:textColor">@color/exo_white_opacity_70</item>
+        <item name="android:text">@string/exo_controls_time_placeholder</item>
+    </style>
+    <style name="ExoStyledControls.TimeText.Position" parent="@style/ExoStyledControls.TimeText">
+        <item name="android:textColor">@color/exo_white</item>
+        <item name="android:text">@string/exo_controls_time_placeholder</item>
+    </style>
+    <style name="ExoStyledControls.TimeText.Separator" parent="@style/ExoStyledControls.TimeText">
+        <item name="android:textColor">@color/exo_white_opacity_70</item>
+        <item name="android:text">·</item>
+    </style>
+    <style name="LargeIconView">
+        <item name="android:layout_width">90.0dip</item>
+        <item name="android:layout_height">90.0dip</item>
+    </style>
+    <style name="SmallIconView">
+        <item name="android:layout_width">50.0dip</item>
+        <item name="android:layout_height">50.0dip</item>
+    </style>
+    <style name="TextAppearance.Compat.Notification" parent="@android:style/TextAppearance.Material.Notification" />
+    <style name="TextAppearance.Compat.Notification.Info" parent="@android:style/TextAppearance.Material.Notification.Info" />
+    <style name="TextAppearance.Compat.Notification.Line2" parent="@style/TextAppearance.Compat.Notification.Info" />
+    <style name="TextAppearance.Compat.Notification.Time" parent="@android:style/TextAppearance.Material.Notification.Time" />
+    <style name="TextAppearance.Compat.Notification.Title" parent="@android:style/TextAppearance.Material.Notification.Title" />
+    <style name="Theme.IAPTheme" parent="@android:style/Theme">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+    <style name="UnityThemeSelector" parent="@style/BaseUnityTheme">
+        <item name="android:windowBackground">@android:color/black</item>
+    </style>
+    <style name="UnityThemeSelector.Translucent" parent="@style/UnityThemeSelector">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+    <style name="Widget.Compat.NotificationActionContainer" parent="">
+        <item name="android:background">@drawable/notification_action_background</item>
+    </style>
+    <style name="Widget.Compat.NotificationActionText" parent="">
+        <item name="android:textAppearance">?android:textAppearanceButton</item>
+        <item name="android:textSize">@dimen/notification_action_text_size</item>
+        <item name="android:textColor">@color/androidx_core_secondary_text_default_material_light</item>
+    </style>
+    <style name="com.applovin.creative.CreativeDebuggerActivity.ActionBar" parent="@android:style/Widget.Material.Light.ActionBar">
+        <item name="android:background">@color/applovin_sdk_brand_color</item>
+        <item name="android:height">@dimen/applovin_sdk_actionBarHeight</item>
+        <item name="android:displayOptions">showTitle</item>
+        <item name="android:titleTextStyle">@style/com.applovin.creative.CreativeDebuggerActivity.ActionBar.TitleTextStyle</item>
+        <item name="android:actionBarItemBackground">@style/com.applovin.creative.CreativeDebuggerActivity.ActionBar.TitleTextStyle</item>
+    </style>
+    <style name="com.applovin.creative.CreativeDebuggerActivity.ActionBar.TitleTextStyle" parent="@android:style/TextAppearance.Material.Widget.ActionBar.Title">
+        <item name="android:textColor">@color/applovin_sdk_textColorPrimary</item>
+    </style>
+    <style name="com.applovin.creative.CreativeDebuggerActivity.Theme" parent="@android:style/Theme.Material.Light">
+        <item name="android:actionBarStyle">@style/com.applovin.mediation.MaxDebuggerActivity.ActionBar</item>
+        <item name="android:actionMenuTextColor">@color/applovin_sdk_textColorPrimary</item>
+        <item name="android:colorPrimaryDark">@color/applovin_sdk_brand_color_dark</item>
+        <item name="android:colorEdgeEffect">@color/applovin_sdk_textColorPrimary</item>
+    </style>
+    <style name="com.applovin.creative.debugger.ui.DisplayedAdActivity.ReportAdButton" parent="@android:style/Widget.Button">
+        <item name="android:textSize">18.0sp</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:background">@drawable/applovin_creative_debugger_report_ad_rounded_button</item>
+        <item name="android:singleLine">true</item>
+    </style>
+    <style name="com.applovin.mediation.MaxDebuggerActivity.ActionBar" parent="@android:style/Widget.Material.Light.ActionBar">
+        <item name="android:background">@color/applovin_sdk_brand_color</item>
+        <item name="android:height">@dimen/applovin_sdk_actionBarHeight</item>
+        <item name="android:displayOptions">showTitle</item>
+        <item name="android:titleTextStyle">@style/com.applovin.mediation.MaxDebuggerActivity.ActionBar.TitleTextStyle</item>
+    </style>
+    <style name="com.applovin.mediation.MaxDebuggerActivity.ActionBar.Live" parent="@style/com.applovin.mediation.MaxDebuggerActivity.ActionBar">
+        <item name="android:background">@color/applovin_sdk_greenColor</item>
+    </style>
+    <style name="com.applovin.mediation.MaxDebuggerActivity.ActionBar.TitleTextStyle" parent="@android:style/TextAppearance.Material.Widget.ActionBar.Title">
+        <item name="android:textColor">@color/applovin_sdk_textColorPrimary</item>
+    </style>
+    <style name="com.applovin.mediation.MaxDebuggerActivity.Theme" parent="@android:style/Theme.Material.Light">
+        <item name="android:actionBarStyle">@style/com.applovin.mediation.MaxDebuggerActivity.ActionBar</item>
+        <item name="android:actionMenuTextColor">@color/applovin_sdk_textColorPrimary</item>
+        <item name="android:colorPrimaryDark">@color/applovin_sdk_brand_color_dark</item>
+        <item name="android:colorEdgeEffect">@android:color/black</item>
+    </style>
+    <style name="com.applovin.mediation.MaxDebuggerActivity.Theme.Live" parent="@style/com.applovin.mediation.MaxDebuggerActivity.Theme">
+        <item name="android:actionBarStyle">@style/com.applovin.mediation.MaxDebuggerActivity.ActionBar.Live</item>
+    </style>
+    <style name="com.applovin.mediation.nativeAds.MaxNativeAdView.AdBadgeTextView" parent="@android:style/Widget.TextView">
+        <item name="android:textColor">@color/applovin_sdk_adBadgeTextColor</item>
+        <item name="android:background">@drawable/applovin_rounded_text_view_border</item>
+        <item name="android:paddingLeft">2.0dip</item>
+        <item name="android:paddingRight">2.0dip</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginRight">4.0dip</item>
+        <item name="android:text">Ad</item>
+        <item name="android:layout_marginEnd">4.0dip</item>
+    </style>
+    <style name="com.applovin.mediation.nativeAds.MaxNativeAdView.AutoScrollingTextView" parent="@android:style/Widget.TextView">
+        <item name="android:textColor">@color/applovin_sdk_grayColor</item>
+        <item name="android:ellipsize">marquee</item>
+        <item name="android:focusable">true</item>
+        <item name="android:focusableInTouchMode">true</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:scrollHorizontally">true</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:marqueeRepeatLimit">marquee_forever</item>
+    </style>
+    <style name="com.applovin.mediation.nativeAds.MaxNativeAdView.CTAButton" parent="@android:style/Widget.Button">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:background">@drawable/applovin_rounded_button</item>
+        <item name="android:singleLine">true</item>
+    </style>
+    <style name="com.applovin.mediation.nativeAds.MaxNativeAdView.ExtraSmallAdBadgeTextView" parent="@style/com.applovin.mediation.nativeAds.MaxNativeAdView.AdBadgeTextView">
+        <item name="android:textSize">10.0sp</item>
+    </style>
+    <style name="com.applovin.mediation.nativeAds.MaxNativeAdView.ExtraSmallScrollingBodyTextView" parent="@style/com.applovin.mediation.nativeAds.MaxNativeAdView.AutoScrollingTextView">
+        <item name="android:textSize">10.0sp</item>
+    </style>
+    <style name="com.applovin.mediation.nativeAds.MaxNativeAdView.ExtraSmallScrollingTitleTextView" parent="@style/com.applovin.mediation.nativeAds.MaxNativeAdView.ScrollingTitleTextView">
+        <item name="android:textSize">13.0sp</item>
+    </style>
+    <style name="com.applovin.mediation.nativeAds.MaxNativeAdView.LargeAdBadgeTextView" parent="@style/com.applovin.mediation.nativeAds.MaxNativeAdView.AdBadgeTextView">
+        <item name="android:textSize">17.0sp</item>
+    </style>
+    <style name="com.applovin.mediation.nativeAds.MaxNativeAdView.LargeScrollingBodyTextView" parent="@style/com.applovin.mediation.nativeAds.MaxNativeAdView.AutoScrollingTextView">
+        <item name="android:textSize">17.0sp</item>
+    </style>
+    <style name="com.applovin.mediation.nativeAds.MaxNativeAdView.LargeScrollingTitleTextView" parent="@style/com.applovin.mediation.nativeAds.MaxNativeAdView.ScrollingTitleTextView">
+        <item name="android:textSize">20.0sp</item>
+    </style>
+    <style name="com.applovin.mediation.nativeAds.MaxNativeAdView.LargeVerticalBodyTextSize" parent="@android:style/Widget.TextView">
+        <item name="android:textSize">17.0sp</item>
+        <item name="android:textColor">@color/applovin_sdk_grayColor</item>
+    </style>
+    <style name="com.applovin.mediation.nativeAds.MaxNativeAdView.LargeVerticalTitleTextSize" parent="@style/com.applovin.mediation.nativeAds.MaxNativeAdView.TitleTextStyle">
+        <item name="android:textSize">20.0sp</item>
+    </style>
+    <style name="com.applovin.mediation.nativeAds.MaxNativeAdView.ScrollingTitleTextView" parent="@style/com.applovin.mediation.nativeAds.MaxNativeAdView.AutoScrollingTextView">
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="com.applovin.mediation.nativeAds.MaxNativeAdView.SmallAdBadgeTextView" parent="@style/com.applovin.mediation.nativeAds.MaxNativeAdView.AdBadgeTextView">
+        <item name="android:textSize">12.0sp</item>
+    </style>
+    <style name="com.applovin.mediation.nativeAds.MaxNativeAdView.SmallScrollingBodyTextView" parent="@style/com.applovin.mediation.nativeAds.MaxNativeAdView.AutoScrollingTextView">
+        <item name="android:textSize">12.0sp</item>
+    </style>
+    <style name="com.applovin.mediation.nativeAds.MaxNativeAdView.SmallScrollingTitleTextView" parent="@style/com.applovin.mediation.nativeAds.MaxNativeAdView.ScrollingTitleTextView">
+        <item name="android:textSize">15.0sp</item>
+    </style>
+    <style name="com.applovin.mediation.nativeAds.MaxNativeAdView.SmallVerticalBodyTextSize" parent="@android:style/Widget.TextView">
+        <item name="android:textSize">12.0sp</item>
+        <item name="android:textColor">@color/applovin_sdk_grayColor</item>
+    </style>
+    <style name="com.applovin.mediation.nativeAds.MaxNativeAdView.SmallVerticalTitleTextSize" parent="@style/com.applovin.mediation.nativeAds.MaxNativeAdView.TitleTextStyle">
+        <item name="android:textSize">14.0sp</item>
+    </style>
+    <style name="com.applovin.mediation.nativeAds.MaxNativeAdView.TitleTextStyle" parent="@android:style/Widget.TextView">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/applovin_sdk_grayColor</item>
+    </style>
+</resources>

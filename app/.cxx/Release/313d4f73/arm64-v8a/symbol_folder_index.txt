@@ -1,0 +1,1 @@
+C:\Users\sosan\AndroidStudioProjects\Granny-Launcher-main\app\build\intermediates\cxx\Release\313d4f73\obj\arm64-v8a

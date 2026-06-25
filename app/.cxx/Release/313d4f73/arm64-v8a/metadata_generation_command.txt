@@ -1,0 +1,23 @@
+                        -HC:\Users\sosan\AndroidStudioProjects\Granny-Launcher-main\app\src\main\cpp
+-DCMAKE_SYSTEM_NAME=Android
+-DCMAKE_EXPORT_COMPILE_COMMANDS=ON
+-DCMAKE_SYSTEM_VERSION=24
+-DANDROID_PLATFORM=android-24
+-DANDROID_ABI=arm64-v8a
+-DCMAKE_ANDROID_ARCH_ABI=arm64-v8a
+-DANDROID_NDK=C:\Users\sosan\AppData\Local\Android\Sdk\ndk\28.2.13676358
+-DCMAKE_ANDROID_NDK=C:\Users\sosan\AppData\Local\Android\Sdk\ndk\28.2.13676358
+-DCMAKE_TOOLCHAIN_FILE=C:\Users\sosan\AppData\Local\Android\Sdk\ndk\28.2.13676358\build\cmake\android.toolchain.cmake
+-DCMAKE_MAKE_PROGRAM=C:\Users\sosan\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe
+-DCMAKE_CXX_FLAGS=-std=c++17 -O3 -DNDEBUG -fvisibility=hidden -fvisibility-inlines-hidden -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -flto=thin
+-DCMAKE_LIBRARY_OUTPUT_DIRECTORY=C:\Users\sosan\AndroidStudioProjects\Granny-Launcher-main\app\build\intermediates\cxx\Release\313d4f73\obj\arm64-v8a
+-DCMAKE_RUNTIME_OUTPUT_DIRECTORY=C:\Users\sosan\AndroidStudioProjects\Granny-Launcher-main\app\build\intermediates\cxx\Release\313d4f73\obj\arm64-v8a
+-BC:\Users\sosan\AndroidStudioProjects\Granny-Launcher-main\app\.cxx\Release\313d4f73\arm64-v8a
+-GNinja
+-DCMAKE_BUILD_TYPE=Release
+-DCMAKE_CXX_VISIBILITY_PRESET=hidden
+-DCMAKE_C_VISIBILITY_PRESET=hidden
+-DCMAKE_VISIBILITY_INLINES_HIDDEN=ON
+-DCMAKE_SHARED_LINKER_FLAGS=-Wl,--strip-all -Wl,--gc-sections -Wl,--as-needed -Wl,--build-id=none -Wl,--discard-all -Wl,--strip-debug
+                        Build command args: []
+                        Version: 2

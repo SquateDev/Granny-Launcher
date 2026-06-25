@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/gui_id"
+    android:layout_width="wrap_content"
+    android:layout_height="30dp"
+    android:gravity="center|center_horizontal|center_vertical"
+    android:orientation="vertical"
+    android:background="@drawable/gui_drawavle"
+    android:padding="4dp">
+
+    <TextView
+        android:id="@+id/text_gui"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_medium_numbers"
+        android:text="NovaClient"
+        android:textColor="#E2E2E2"
+        android:textSize="16sp" />
+</LinearLayout>

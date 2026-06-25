@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12.0dip">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0">
+            <TextView
+                android:textSize="16.0dip"
+                android:textStyle="bold"
+                android:textColor="@color/bm_privacy_title_color"
+                android:id="@id/bmPrivacySheetTitle"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:includeFontPadding="false" />
+            <TextView
+                android:textSize="14.0dip"
+                android:textColor="@color/bm_privacy_subtitle_color"
+                android:id="@id/bmPrivacySheetSubtitle"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4.0dip"
+                android:includeFontPadding="false" />
+        </LinearLayout>
+        <ImageButton
+            android:id="@id/bmPrivacySheetClose"
+            android:background="@drawable/bm_bg_ripple_circle"
+            android:padding="8.0dip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/bm_ic_close"
+            android:minWidth="0.0dip"
+            android:minHeight="0.0dip"
+            android:contentDescription="@null" />
+    </LinearLayout>
+    <ScrollView
+        android:scrollbars="none"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16.0dip"
+        android:overScrollMode="never">
+        <LinearLayout
+            android:orientation="vertical"
+            android:id="@id/bmPrivacySheetActionButtonsContainer"
+            android:paddingBottom="16.0dip"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:divider="@drawable/bm_bg_privacy_divider"
+            android:showDividers="middle" />
+    </ScrollView>
+</merge>
